@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arse — Data & Viz Portfolio (Starter)</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Starter portfolio for data visualization, analysis and annotation projects. Edit the Projects section to add your work." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
+      --maxwidth:1100px; --radius:12px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,#071025 10%,var(--bg)); color:#e6eef8; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxwidth); margin:40px auto; padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start;margin-bottom:28px}
+
+    .card{background:linear-gradient(180deg,var(--card),#071025);padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .bio h1{margin:0 0 6px 0;font-size:28px}
+    .bio p{color:var(--muted);margin:0 0 12px}
+    .cta{display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;background:var(--glass);color:#e6eef8;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#7c3aed);font-weight:600}
+
+    .stats{display:flex;gap:12px;margin-top:12px}
+    .stat{background:transparent;padding:8px;border-radius:10px;color:var(--muted);font-size:14px}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .proj{display:flex;flex-direction:column;gap:10px}
+    .proj .thumb{height:150px;border-radius:10px;background:linear-gradient(135deg,#0f1724 0%,#092032);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+    .tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03);font-size:12px;color:var(--muted)}
+    .links{display:flex;gap:8px;margin-top:auto}
+    .links a{font-size:13px;color:var(--muted);text-decoration:none}
+
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">A</div>
+        <div>
+          <div style="font-weight:700">Arse — Data & Visualization</div>
+          <div style="font-size:13px;color:var(--muted)">Student • Info Systems • Data viz & annotation</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#demos">Demos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card bio">
+        <h1>Hi — I'm Arse</h1>
+        <p>I build clear, reproducible data visualizations and annotated datasets. This starter portfolio is ready — just replace the project cards below with your work.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">See projects</a>
+          <a class="btn" href="mailto:your.email@example.com">Email me</a>
+        </div>
+        <div class="stats">
+          <div class="stat">📊 Data viz</div>
+          <div class="stat">🧾 Analysis</div>
+          <div class="stat">🖼️ Annotation</div>
+        </div>
+      </div>
+
+      <aside class="card" style="height:100%">
+        <div style="font-weight:700;margin-bottom:10px">Quick instructions</div>
+        <ol style="color:var(--muted);margin:0;padding-left:18px">
+          <li>Open <strong>index.html</strong> and find the <code>&lt;!-- PROJECTS: START --&gt;</code> marker.</li>
+          <li>Copy a project card block and replace title, description, tags, and links.</li>
+          <li>Push to GitHub and enable Pages (see README comments at bottom).</li>
+          <li>For interactive demos, link to a Streamlit or Observable app in the Demos section.</li>
+        </ol>
+      </aside>
+    </section>
+
+    <section id="projects">
+      <h2 style="margin-bottom:12px">Projects</h2>
+      <div class="projects-grid">
+
+        <!-- PROJECTS: START -->
+        <!-- 
+           Each project card below is a simple block to copy/modify.
+           Replace title, description, tags, thumb (image path or remove), repo and live links.
+         -->
+        <article class="card proj">
+          <div class="thumb">Project image</div>
+          <div style="font-weight:700">Project — Example Visualization</div>
+          <div style="color:var(--muted);font-size:14px">A short description: EDA and interactive visualizations exploring X dataset using Python, Altair, and annotations.</div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Altair</span>
+            <span class="tag">Annotation</span>
+          </div>
+          <div class="links">
+            <a href="#">Code</a>
+            <a href="#">Live</a>
+          </div>
+        </article>
+
+        <article class="card proj">
+          <div class="thumb">Project image</div>
+          <div style="font-weight:700">Project — Data Cleaning & Labeling</div>
+          <div style="color:var(--muted);font-size:14px">Built a labeled dataset and small annotation tool; documented process and labeling schema.</div>
+          <div class="tags">
+            <span class="tag">Labeling</span>
+            <span class="tag">Documentation</span>
+          </div>
+          <div class="links">
+            <a href="#">Code</a>
+            <a href="#">Docs</a>
+          </div>
+        </article>
+
+        <article class="card proj">
+          <div class="thumb">Project image</div>
+          <div style="font-weight:700">Project — Dashboard Prototype</div>
+          <div style="color:var(--muted);font-size:14px">Prototype dashboard for quick insights using Recharts embedded in a small app. Includes screenshots and demo link.</div>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Recharts</span>
+          </div>
+          <div class="links">
+            <a href="#">Repo</a>
+            <a href="#">Demo</a>
+          </div>
+        </article>
+        <!-- PROJECTS: END -->
+
+      </div>
+    </section>
+
+    <section id="demos" style="margin-top:20px">
+      <h2 style="margin-bottom:12px">Interactive demos & notebooks</h2>
+      <div class="projects-grid">
+        <div class="card" style="padding:14px"> 
+          <div style="font-weight:700">Streamlit / Observable demos</div>
+          <div style="color:var(--muted);margin-top:8px">Embed your interactive demos here. Example: paste an iframe for an Observable notebook or a Streamlit Cloud app link.</div>
+          <div style="color:var(--muted);margin-top:8px;font-size:13px">Tip: keep a short description and a screenshot for visitors who can't run the live demo.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:20px">
+      <h2>Contact</h2>
+      <div class="card" style="display:flex;gap:12px;align-items:center">
+        <div style="flex:1">
+          <div style="font-weight:700">Get in touch</div>
+          <div style="color:var(--muted);margin-top:6px">Email: <a href="mailto:arsemamengistu95@gmail.com">arsemamengistu95@gmail.com</a></div>
+          <div style="color:var(--muted);margin-top:6px">GitHub: <a href="https://github.com/Arsema212">github.com/Arsema212</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Built with a simple starter template — edit <code>index.html</code> to add your work. Want me to push this into a GitHub repo for you? Tell me and I'll give exact commands for your system.
+    </footer>
+
+    <!-- README: How to deploy this file on GitHub Pages (quick)
+      1) Create a GitHub account (if you don't have one) at https://github.com
+      2) Create a new repository (public). Name it either:
+         - username.github.io  (personal site) OR
+         - any-name (then enable Pages from main branch / root)
+      3) In your project folder locally: 
+         git init
+         git add index.html
+         git commit -m "Initial portfolio"
+         git branch -M main
+         git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+         git push -u origin main
+      4) On GitHub, go to Settings -> Pages -> Publish from "main" branch (root) and save.
+      5) Wait a few minutes, then visit https://YOUR_USERNAME.github.io/YOUR_REPO (or username.github.io if you used that name).
+
+      Optional: If you prefer the web UI, you can upload index.html directly in the repository using the "Add file -> Upload files" button, then publish Pages.
+
+      Need help with git push (Windows vs Linux) or want me to write a step-by-step terminal guide? Reply with your OS and I will produce the exact commands.
+    -->
+
+  </div>
+</body>
+</html>
